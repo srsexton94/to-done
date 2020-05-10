@@ -18,6 +18,7 @@ const logStore = () => {
     return JSON.parse(str)
   })
   const todosHtml = todosTemplate({ todos: storageArr })
+  $('#list').html(todosHtml)
   console.log(todosHtml)
 }
 
