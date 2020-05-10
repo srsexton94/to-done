@@ -1,11 +1,26 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
+const todosTemplate = require('./templates/todos.handlebars')
 
-// use require without a reference to ensure a file is bundled
-// require('./example')
+// const add = () => {
+//   const myDate = new Date()
+//   const obj = {
+//     title: 'My 2nd todo item',
+//     date: myDate
+//   }
+//   const strObj = JSON.stringify(obj)
+//   const id = 'todo' + (localStorage.length + 1).toString()
+//   localStorage.setItem(id, strObj)
+// }
+
+const logStore = () => {
+  const storageArr = Object.values(localStorage).map(str => {
+    return JSON.parse(str)
+  })
+  const todosHtml = todosTemplate({ todos: storageArr })
+  console.log(todosHtml)
+}
 
 $(() => {
-  // your JS code goes here
+  logStore()
 })

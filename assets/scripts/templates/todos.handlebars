@@ -1,0 +1,9 @@
+<ul>
+  {{#each todos as |todo|}}
+    {{#if todo.url}}
+      <li><a href="{{todo.url}}" target="_blank">{{todo.title}}</a></li>
+    {{else}}
+      <li>{{todo.title}}</li>
+    {{/if}}
+  {{/each}}
+</ul>

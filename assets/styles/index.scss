@@ -8,7 +8,7 @@ body {
   background-size: cover;
   display: flex;
   font-family: sans-serif;
-  height: 110%;
+  height: 100%;
 }
 
 form {
@@ -27,8 +27,13 @@ form {
   }
 
   input {
+    background-color: #F0E68C;
     border-radius: 5px;
     width: 200px;
+  }
+
+  .date {
+    width: 60%;
   }
 }
 
@@ -38,15 +43,20 @@ form {
   background-size: contain;
   display: block;
   font-family: Verdana, sans-serif;
-  height: 90vh;
-  margin: 15vh 50vh 15vh 0;
-  width: 60vh;
+  height: 750px;
+  margin: 15vh 40vh 15vh 0;
+  width: 450px;
 
   h1 {
     font-family: 'Permanent Marker', cursive;
     font-size: 2em;
     margin-top: 5vh;
     text-align: center;
+  }
+
+  section {
+    margin: auto;
+    width: 85%;
   }
 }
 

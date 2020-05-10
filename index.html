@@ -9,6 +9,7 @@
 
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script type="text/javascript">window.localStorage</script>
     </head>
     <body>
       <form>
@@ -17,12 +18,12 @@
           <input type="text" placeholder="Call Mom">
         </label>
         <label>Due Date?
-          <input type="date">
+          <input class="date" type="date">
         </label>
         <label>Link?
           <input type="text" placeholder="https://www.MoreInfo.com/">
         </label>
-        <input type="submit" class="btn btn-primary btn-sm" value="Add to List">
+        <input type="submit" class="btn btn-info btn-sm" value="Add to List">
       </form>
       <main class="notepad">
         <h1>To do? ...To-DONE!</h1>
