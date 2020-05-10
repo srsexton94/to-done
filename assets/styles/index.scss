@@ -2,11 +2,13 @@
 
 body {
   align-items: center;
+  background-color: #121212;
   background-image: url('public/background.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
-  overflow: hidden;
+  font-family: sans-serif;
+  height: 110%;
 }
 
 form {
@@ -35,13 +37,21 @@ form {
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
+  font-family: Verdana, sans-serif;
   height: 90vh;
   margin: 15vh 50vh 15vh 0;
   width: 60vh;
-}
 
-@media only screen and (max-width: 700px) {
-  body {
-    background-size: 130vw 130vh;
+  h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2em;
+    margin-top: 5vh;
+    text-align: center;
   }
 }
+
+// @media only screen and (max-width: 700px) {
+//   body {
+//     background-size: 130vw 130vh;
+//   }
+// }
