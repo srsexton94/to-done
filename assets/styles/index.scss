@@ -1,1 +1,47 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  align-items: center;
+  background-image: url('public/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+form {
+  background-color: #F0E68C;
+  border-radius: 3px;
+  height: 45vh;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  transform: rotate(-10deg);
+  width: 45vh;
+
+  h2 {
+    font-size: 1.5em;
+    margin-top: 15%;
+  }
+
+  input {
+    border-radius: 5px;
+    width: 200px;
+  }
+}
+
+.notepad {
+  background-image: url('public/notepad.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 90vh;
+  margin: 15vh 50vh 15vh 0;
+  width: 60vh;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-size: 130vw 130vh;
+  }
+}

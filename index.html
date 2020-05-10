@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>To-Done Task Manager</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,21 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <form>
+        <h2>I've got something to do...</h2>
+        <label>To Do:
+          <input type="text" placeholder="Call Mom">
+        </label>
+        <label>Due Date?
+          <input type="date">
+        </label>
+        <label>Link?
+          <input type="text" placeholder="https://www.MoreInfo.com/">
+        </label>
+        <input type="submit" class="btn btn-primary btn-sm" value="Add to List">
+      </form>
+      <main class="notepad">
+        <h1>To do? To-DONE!</h1>
+      </main>
     </body>
 </html>
