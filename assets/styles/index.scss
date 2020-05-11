@@ -32,6 +32,15 @@ form {
     width: 200px;
   }
 
+  .alert {
+    background-color: ivory;
+    border: 2px solid red;
+    color: red;
+    margin: 1vh auto;
+    font-size: 10px;
+    font-style: italic;
+  }
+
   .date {
     width: 60%;
   }
@@ -45,6 +54,7 @@ form {
   font-family: Verdana, sans-serif;
   height: 750px;
   margin: 15vh 40vh 15vh 0;
+  position: relative;
   width: 450px;
 
   h1 {
@@ -58,10 +68,22 @@ form {
     margin: auto;
     width: 85%;
   }
+
+  .instruct {
+    color: grey;
+    font-size: .7em;
+    font-style: italic;
+    margin: 0 10px;
+  }
+
+  .buttons {
+    bottom: 175px;
+    left: 100px;
+    position: absolute;
+  }
 }
 
-// @media only screen and (max-width: 700px) {
-//   body {
-//     background-size: 130vw 130vh;
-//   }
+// @media only screen and (max-width: 900px) {
+//   make it mobile responsive!!
+//   starts going wayward @900px width
 // }
