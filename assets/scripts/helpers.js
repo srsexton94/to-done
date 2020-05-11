@@ -15,8 +15,11 @@ const dataValidate = data => {
   return !((Date.parse(data[1]) < Date.now()) || (data[2] && !urlValidate(data[2])))
 }
 
-const postTodo = data => {
+const postTodo = (data, complete) => {
+  // create an `id` to serve as key in localStorage
   const id = 'todo' + (localStorage.length + 1)
+
+  // declare a default obj with data values
   const obj = {
     title: data[0],
     date: data[1],
@@ -24,8 +27,15 @@ const postTodo = data => {
     id: id,
     complete: false
   }
+
+  // if passed a `complete` attribute, changes the obj complete value to true
+  if (complete) {
+    obj.complete = true
+  }
+  // make the object a string for localStorage
   const strObj = JSON.stringify(obj)
-  return localStorage.setItem(id, strObj)
+  // post to localStorage
+  localStorage.setItem(id, strObj)
 }
 
 module.exports = {
