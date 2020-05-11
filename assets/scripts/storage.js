@@ -27,6 +27,7 @@ const onSubmit = event => {
       $('#alert').text('').removeClass('alert')
     }, 2000)
   }
+  $('#submission').trigger('reset')
 }
 
 const markComplete = event => {
