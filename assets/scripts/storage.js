@@ -30,7 +30,7 @@ const onSubmit = event => {
   }
 }
 
-const markComplete = event => {
+const toggleComplete = event => {
   const id = $(event.target).data('id')
   if ($(event.target).prop('checked')) {
     helpers.updateTodo(id, true)
@@ -46,6 +46,17 @@ const clearStorage = () => {
   loadList()
 }
 
+const removeCompleted = () => {
+  const inputArr = $('#list input')
+  for (let i = 0; i < localStorage.length; i++) {
+    const id = inputArr[i].getAttribute('data-id')
+    if (inputArr[i].checked) {
+      localStorage.removeItem(id)
+    }
+  }
+  loadList()
+}
+
 const loadList = () => {
   const storageArr = Object.values(localStorage).map(str => {
     return JSON.parse(str)
@@ -56,8 +67,9 @@ const loadList = () => {
 
 const addHandlers = () => {
   $('#submission').on('submit', onSubmit)
-  $('#list').on('click', '.check', markComplete)
+  $('#list').on('click', '.check', toggleComplete)
   $('#clear').on('click', clearStorage)
+  $('#remove').on('click', removeCompleted)
 }
 
 module.exports = {

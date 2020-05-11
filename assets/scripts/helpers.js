@@ -43,14 +43,16 @@ const postTodo = (data) => {
 }
 
 // takes the id string for the localStorage key & a boolean if its complete
-// updates localStorage accordingly
 const updateTodo = (id, complete) => {
   // retrieve the data for the `todo` item checked
   const item = localStorage.getItem(id)
+
   // create POJO of retrieved data
   const data = Object.entries(JSON.parse(item)).map(e => e[1])
+
   // use helper function to stringify a full updated object
   const strObj = createTodo(data, id, complete)
+
   // post it to update localStorage
   localStorage.setItem(id, strObj)
 }
