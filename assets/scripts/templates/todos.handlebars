@@ -1,14 +1,19 @@
 <ul>
   {{#each todos as |todo|}}
-    {{#if todo.url}}
+    {{#if todo.complete}}
+      <li>
+        <s>{{todo.title}}</s>
+        <input class="check" data-id="{{todo.id}}" type="checkbox" checked>
+      </li>
+    {{else if todo.url}}
       <li>
         <a href="{{todo.url}}" target="_blank">{{todo.title}}</a>
-        <input type="checkbox">
+        <input class="check" data-id="{{todo.id}}" type="checkbox">
       </li>
     {{else}}
       <li>
         {{todo.title}}
-        <input type="checkbox">
+        <input class="check" data-id="{{todo.id}}" type="checkbox">
       </li>
     {{/if}}
   {{/each}}

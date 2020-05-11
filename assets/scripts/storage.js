@@ -29,6 +29,17 @@ const onSubmit = event => {
   }
 }
 
+const markComplete = event => {
+  const id = $(event.target).data('id')
+  if ($(event.target).prop('checked')) {
+    helpers.updateTodo(id, true)
+    loadList()
+  } else {
+    helpers.updateTodo(id, false)
+    loadList()
+  }
+}
+
 const loadList = () => {
   const storageArr = Object.values(localStorage).map(str => {
     return JSON.parse(str)
@@ -39,6 +50,7 @@ const loadList = () => {
 
 const addHandlers = () => {
   $('#submission').on('submit', onSubmit)
+  $('#list').on('click', '.check', markComplete)
 }
 
 module.exports = {

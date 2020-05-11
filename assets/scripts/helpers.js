@@ -15,10 +15,7 @@ const dataValidate = data => {
   return !((Date.parse(data[1]) < Date.now()) || (data[2] && !urlValidate(data[2])))
 }
 
-const postTodo = (data, complete) => {
-  // create an `id` to serve as key in localStorage
-  const id = 'todo' + (localStorage.length + 1)
-
+const createTodo = (data, id, complete) => {
   // declare a default obj with data values
   const obj = {
     title: data[0],
@@ -33,12 +30,33 @@ const postTodo = (data, complete) => {
     obj.complete = true
   }
   // make the object a string for localStorage
-  const strObj = JSON.stringify(obj)
-  // post to localStorage
+  return JSON.stringify(obj)
+}
+
+const postTodo = (data) => {
+  // create an `id` to serve as key in localStorage
+  const id = 'todo' + (localStorage.length + 1)
+  // creates a stringified object of a yet-incomplete todo
+  const strObj = createTodo(data, id, false)
+  // post it to localStorage
+  localStorage.setItem(id, strObj)
+}
+
+// takes the id string for the localStorage key & a boolean if its complete
+// updates localStorage accordingly
+const updateTodo = (id, complete) => {
+  // retrieve the data for the `todo` item checked
+  const item = localStorage.getItem(id)
+  // create POJO of retrieved data
+  const data = Object.entries(JSON.parse(item)).map(e => e[1])
+  // use helper function to stringify a full updated object
+  const strObj = createTodo(data, id, complete)
+  // post it to update localStorage
   localStorage.setItem(id, strObj)
 }
 
 module.exports = {
   dataValidate,
-  postTodo
+  postTodo,
+  updateTodo
 }
