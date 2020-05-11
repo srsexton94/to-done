@@ -40,6 +40,11 @@ const markComplete = event => {
   }
 }
 
+const clearStorage = () => {
+  localStorage.clear()
+  loadList()
+}
+
 const loadList = () => {
   const storageArr = Object.values(localStorage).map(str => {
     return JSON.parse(str)
@@ -51,6 +56,7 @@ const loadList = () => {
 const addHandlers = () => {
   $('#submission').on('submit', onSubmit)
   $('#list').on('click', '.check', markComplete)
+  $('#clear').on('click', clearStorage)
 }
 
 module.exports = {
