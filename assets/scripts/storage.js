@@ -17,6 +17,7 @@ const onSubmit = event => {
   if (helpers.dataValidate(data) && localStorage.length < 15) {
     helpers.postTodo(data)
     loadList()
+    $('#submission').trigger('reset')
   } else {
     // sets a failure alert
     $('#alert')
@@ -27,7 +28,6 @@ const onSubmit = event => {
       $('#alert').text('').removeClass('alert')
     }, 2000)
   }
-  $('#submission').trigger('reset')
 }
 
 const markComplete = event => {
