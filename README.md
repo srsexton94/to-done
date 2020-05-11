@@ -15,6 +15,8 @@ As a user I want to...
 * remove a task
 
 ## Future Goals
-In future iterations of this project I would firstly like to improve its mobile-responsiveness, and secondly perhaps add extra attributes to the `todo` items.
+In future iterations of this project I would firstly like to add functionality to alert the user when a due-date for one of their tasks is approaching.
 
-Additionally I would like to de-bug the strange ordering of the localStorage index view (the to do list items dont load in order) and adjuset my form validation so it allows for closer due dates (currently not allowing one day out).
+Additionally I would also like to improve its mobile-responsiveness, and perhaps add extra attributes to the `todo` items (would need to brainstorm what else would be useful to the user).
+
+Lastly I would like to de-bug the strange ordering of the localStorage index view (the to do list items don't load in order) and adjuset my form validation so it allows for closer due dates (currently not allowing less than one day out).
