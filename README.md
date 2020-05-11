@@ -1,5 +1,6 @@
 # To-DONE
 A classic To-Do application where a user can keep track of and manage their tasks
+- Inspired from [florinpop17 / app-ideas / To-Do App](https://github.com/florinpop17/app-ideas/blob/master/Projects/2-Intermediate/To-Do-App.md)
 
 ## Dependencies
 -  [GAs Browser Template](https://git.generalassemb.ly/ga-wdi-boston/browser-template)
