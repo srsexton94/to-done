@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>To-Done Task Manager</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script type="text/javascript">window.localStorage</script>
+    </head>
+    <body>
+      <form id="submission">
+        <h2>I've got something to do...</h2>
+        <label>To Do:
+          <input type="text" placeholder="Call Mom" required>
+        </label>
+        <label>Due Date?
+          <input class="date" type="date">
+        </label>
+        <label>Link?
+          <input type="text" placeholder="https://www.MoreInfo.com/">
+        </label>
+        <input type="submit" class="btn btn-info btn-sm" value="Add to List">
+        <p id="alert"></p>
+      </form>
+      <main class="notepad">
+        <h1>To do? ...To-DONE!</h1>
+        <p class="instruct">Add a task via the post it and check it as "Complete" when you're done!</p>
+        <section id="list">
+        </section>
+        <section class="buttons">
+          <button id="remove" class="btn btn-warning btn-sm">Remove Completed</button>
+          <button id="clear" class="btn btn-danger btn-sm">Clear List</button>
+        </section>
+      </main>
+    </body>
+</html>
